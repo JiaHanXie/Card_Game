@@ -59,6 +59,9 @@ void Game::execute(){
 		first_choose=rand()%20;
 		Process.push_back(to_string(first_choose));
 		second_choose=rand()%20;
+		while(first_choose==second_choose){
+			second_choose=rand()%20;
+		}
 		Process.push_back(to_string(second_choose));
 		if((Card_board[first_choose]==Card_board[second_choose])&&\
 			(on[first_choose]!=-1)&&(on[second_choose]!=-1)){
